@@ -6,14 +6,11 @@ In this PR https://github.com/ros-planning/moveit/pull/1382 @negril posted a sta
 
 ## Installation
 
-OpenVINO is an intel library that uses interposition to redefine malloc and in a way that breaks assumptions made by the code in RobotState.
-
-This is not a contrived example, OpenVINO is a library that we are currently trying to use in the same node as we are using MoveIt.
+OpenVINO is an intel library for processing the image data (neural net inference).  This is not a contrived example, OpenVINO is a library that we are currently trying to use in the same node as we are using MoveIt.
 
 ### OpenVINO toolkit
 
-The vision system also utilizes Intel OpenVINO toolkit for processing the image data (neural net inference). Use the
-following commands to install pre-built libraries.
+Use the following commands to install pre-built libraries.
 ```
 wget -O- https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS-2019.PUB | sudo apt-key add -
 echo "deb https://apt.repos.intel.com/openvino/2019/ all main" | sudo tee -a /etc/apt/sources.list.d/intel-openvino-2019.list > /dev/null
