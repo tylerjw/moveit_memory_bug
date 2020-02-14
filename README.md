@@ -49,7 +49,6 @@ For a thorough documentation of different installation options, see
 
         wstool init .  # Create a 'master' rosinstall file in src folder
         git clone https://github.com/tylerjw/moveit_memory_bug.git
-        wstool merge -t . moveit_memory_bug/upstream.rosinstall
         wstool merge -t . moveit_memory_bug/moveit_memory_bug.rosinstall
         wstool update -t .  # this will download all the files from git as described in the .rosinstall file
         rosdep install --from-paths . --ignore-src --rosdistro ${ROS_DISTRO} -r -y  # This installs system dependencies via apt
